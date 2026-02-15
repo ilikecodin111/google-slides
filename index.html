@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Soundboard</title>
+</head>
+<body>
+
+<div id="board"></div>
+
+<script>
+const sounds = [
+  {name:"heyy", file:"Sybau.mp3"},
+  {name:"uwu", file:"sus.mp3"},
+  {name:"hog rider", file:"hogrider.mp3"},
+  {name:"fnaf", file:"fnaffoxy.mp3"},
+  {name:"vine boom", file:"vineboom.mp3"},
+  {name:"indian", file:"indian.mp3"},
+  {name:"amine", file:"amine.mp3"},
+  {name:"gyat", file:"gyat.mp3"},
+  {name:"67", file:"67.mp3"},
+  {name:"rizz", file:"riz.mp3"},
+  {name:"steve", file:"iamsteve.mp3"},
+  {name:"racist", file:"racist.mp3"},
+  {name:"banana", file:"banana.mp3"},
+
+  
+
+];
+
+const board = document.getElementById("board");
+
+sounds.forEach(sound=>{
+  const btn = document.createElement("button");
+  btn.textContent = sound.name;
+
+  btn.onclick = ()=>{
+    new Audio(sound.file).play();
+  };
+
+  board.appendChild(btn);
+});
+</script>
+
+</body>
+</html>
