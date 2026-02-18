@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Untitled presentation - Google Slides</title>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+
+</head>
+<body>
+
+<div id="board"></div>
+<h1 id = "scorebord">score : 0</h1>
+<script>
+const sounds = [
+  {name:"heyy", file:"Sybau.mp3"},
+  {name:"uwu", file:"sus.mp3"},
+  {name:"hog rider", file:"hogrider.mp3"},
+  {name:"fnaf", file:"fnaffoxy.mp3"},
+  {name:"vine boom", file:"vineboom.mp3"},
+  {name:"indian", file:"indian.mp3"},
+  {name:"amine", file:"amine.mp3"},
+  {name:"gyat", file:"gyat.mp3"},
+  {name:"67", file:"67.mp3"},
+  {name:"rizz", file:"riz.mp3"},
+  {name:"steve", file:"iamsteve.mp3"},
+  {name:"racist", file:"racist.mp3"},
+  {name:"banana", file:"banana.mp3"},
+  {name:"kim", file:"kim.mp3"},
+
+  
+
+];
+
+const board = document.getElementById("board");
+let scoree = 0
+const scoreboard = document.getElementById("scorebord");
+sounds.forEach(sound=>{
+  const btn = document.createElement("button");
+  btn.textContent = sound.name;
+
+  btn.onclick = ()=>{
+    new Audio(sound.file).play();
+    scoree ++;
+    scoreboard.textContent = 'Score: ' + scoree;
+
+  };
+
+  board.appendChild(btn);
+});
+</script>
+
+</body>
+</html>
